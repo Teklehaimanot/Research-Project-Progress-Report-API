@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.send('we are on home page')
 })
 
-// app.use('/api/employees', require('./api/routes/employees'))
+app.use('/api/user', require('./api/user/user.router'))
 
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true })
